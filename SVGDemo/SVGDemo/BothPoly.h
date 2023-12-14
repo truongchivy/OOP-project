@@ -36,12 +36,12 @@ public:
 class PolyLine : public BothPoly {
 public:
 	void SetPolyLine(int* rgb, int thickness, int NumberPoint, Point2D* points, int* fill_rgb, double fill_opacity, double stroke_opacity);
-	VOID OnPaint(HDC hdc);
+	VOID Draw(HDC hdc);
 };
 
 
 class PolyGon : public BothPoly {
 public:
 	void SetPolyGon(int* rgb, int* fill_rgb, int thickness, int NumOfPoint, Point2D* points, double fill_opacity, double stroke_opacity);
-	VOID OnPaint(HDC hdc);
+	VOID Draw(HDC hdc);
 };

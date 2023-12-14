@@ -16,7 +16,7 @@ void Ellipses::SetEllipse(int* rgb, Point2D toado, int rX, int rY, int thickness
 	}
 }
 
-VOID Ellipses::OnPaint(HDC hdc) {
+VOID Ellipses::Draw(HDC hdc) {
 	Graphics graphics(hdc);
 	int beta = 255 * fill_opacity;
 	Pen      pen(Color(beta, rgb[0], this->rgb[1], this->rgb[2]), this->thickness);

@@ -21,7 +21,7 @@ void friendRect::fillRectangle(HDC hdc, int opacity) {
 	graphics.FillRectangle(&fill_rect, toado.GetX(), toado.GetY(), width, height);
 }
 
-VOID friendRect::OnPaint(HDC hdc) {
+VOID friendRect::Draw(HDC hdc) {
 	Graphics graphics(hdc);
 	Pen      pen(Color(rgb[0], rgb[1], rgb[2]), thickness);
 	graphics.DrawRectangle(&pen, toado.GetX(), toado.GetY(), width, height);

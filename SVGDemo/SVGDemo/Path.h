@@ -2,6 +2,7 @@
 #include "stdafx.h"
 #include "rapidxml.hpp"
 #include <iostream>
+#include<vector>
 #include <windows.h>
 #include <objidl.h>
 #include <gdiplus.h>
@@ -15,15 +16,18 @@ using namespace Gdiplus;
 
 
 #pragma comment (lib,"Gdiplus.lib")
-
-class Line : public Shape {
+		
+class Path : public Shape {
 protected:
+	//	HDC hdc;
 	int rgb[3];
+	int fill_rgb[3];
 	int thickness;
-	Point2D coor1, coor2;
+	vector<vector<Point2D>> points;
+	vector<char> commands;
+	double fill_opacity;
 	double stroke_opacity;
 public:
-	void SetLine(int* rgb, Point2D coor1, Point2D coor2, int thickness, double stroke_opacity);
-
+	void SetPath(int rgb[3], int fill_rgb[3], int thickness, vector<char> commands, vector<vector<Point2D>> points, double stroke_opacity, double fill_opacity);
 	VOID Draw(HDC hdc);
 };

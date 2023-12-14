@@ -10,6 +10,7 @@
 #include "Point2D.h"
 
 
+
 using namespace std;
 using namespace rapidxml;
 using namespace Gdiplus;
@@ -19,15 +20,22 @@ using namespace Gdiplus;
 
 class Shape {
 protected:
-	int ArrSize;
-	Shape** Arr;
+	int rgb[3];
+	int fill_rgb[3];
+	int thickness;
+	double fill_opacity;
+	double stroke_opacity;
 
 public:
-	Shape();
-
-	void ReadSVG(HDC hdc);
-
-	virtual VOID OnPaint(HDC hdc);
+	void ReadXML(HDC hdc, string);
+	void HandleSVG(HDC hdc, xml_node<>*& root);
+	void convertRGB(string value, int* rgb);
+	void ReadSVG(HDC hdc, xml_node<>*& root, int* fill, double fill_opacity, int* stroke_fill,
+		double stroke_opacity, int thickness, int font_size);
+	friend string rgbToHex(int red, int green, int blue);
+	friend string decap(string str);
+	friend string NameToHex(string name);
+	virtual VOID Draw(HDC hdc);
 	virtual void fillRectangle(HDC, int);
 	~Shape();
 };

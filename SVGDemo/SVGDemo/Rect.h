@@ -37,7 +37,7 @@ public:
 
 	void fillRectangle(HDC hdc, int);
 
-	VOID OnPaint(HDC hdc);
+	VOID Draw(HDC hdc);
 };
 
 

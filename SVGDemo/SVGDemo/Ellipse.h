@@ -29,5 +29,5 @@ protected:
 	double fill_opacity;
 public:
 	void SetEllipse(int* rgb, Point2D toado, int rX, int rY, int thickness, int* fill_rgb, double stroke_opacity, double fill_opacity);
-	VOID OnPaint(HDC hdc);
+	VOID Draw(HDC hdc);
 };

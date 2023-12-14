@@ -11,10 +11,9 @@ void Text::SetText(string text, int* rgb, int size, Point2D toado) {
     this->font_size = size;
 }
 
-VOID Text::OnPaint(HDC hdc) {
+VOID Text::Draw(HDC hdc) {
     wstring widestr = wstring(text.begin(), text.end());
     const wchar_t* widecstr = widestr.c_str();
-
     Graphics    graphics(hdc);
     SolidBrush  brush(Color(this->rgb[0], this->rgb[1], this->rgb[2]));
     FontFamily  fontFamily(L"Times New Roman");
@@ -23,3 +22,4 @@ VOID Text::OnPaint(HDC hdc) {
     PointF      pointF(toado.GetX(), toado.GetY() - font.GetHeight(FontStyleRegular) + fontFamily.GetCellDescent(FontStyleRegular) / alpha);
     graphics.DrawString(widecstr, -1, &font, pointF, &brush);
 }
+

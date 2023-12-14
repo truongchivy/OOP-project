@@ -20,10 +20,11 @@ class Text : public Shape {
 protected:
 	string text;
 	int rgb[3];
+	int fill_rgb[3];
 	int font_size;
 	Point2D toado;
 
 public:
 	void SetText(string text, int* rgb, int font_size, Point2D toado);
-	VOID OnPaint(HDC hdc);
+	VOID Draw(HDC hdc);
 };

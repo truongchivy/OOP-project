@@ -30,16 +30,10 @@
     <ClInclude Include="rapidxml.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Ellipse.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Rect.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BothPoly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Point2D.h">
+    <ClInclude Include="Rect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Line.h">
@@ -48,7 +42,16 @@
     <ClInclude Include="Text.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Point2D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Ellipse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="SVG.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Path.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -56,13 +59,16 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SVGFull.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ellipse.cpp">
+    <ClCompile Include="SVGDemo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Rect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ellipse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BothPoly.cpp">
@@ -74,7 +80,7 @@
     <ClCompile Include="Line.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Text.cpp">
+    <ClCompile Include="Path.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
